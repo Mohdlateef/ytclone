@@ -14,19 +14,19 @@
             </span></button>
             <div id="input">
             <form>
-                <input type="text" name="search">
+                <input type="text" name="search" placeholder="search">
                 <button><span class="material-symbols-outlined">
                     search
             
             </span></button>
             </form>
-            <div>
+            <div class="mic">
             <span class="material-symbols-outlined">
                 keyboard_voice
                 </span>
             </div>
             </div>
-            <div>
+            <div class="last_iteams">
                 <span class="material-symbols-outlined">
                     video_library
                     </span>
@@ -38,6 +38,7 @@
                             </span>
             </div>   
     </nav>
+    <main>
     <section class="sidebar">
         <div class="sidebar-top">
           <div class="home">
@@ -255,7 +256,7 @@
         <div class="top-menu">
           <div class="search-filters" onClick="searchFilters(event)">
             <div class="search-filter-items">
-              <div class="filter-button">All</div>
+              <div class="filter-button" id="first">All</div>
             </div>
             <div class="search-filter-items">
               <div class="filter-button">Sports</div>
@@ -337,7 +338,8 @@
             </div>
           </div>
         </div>
-
+     <div class="main"></div>
+      </main>
 
 
         <script src="./script.js"></script>

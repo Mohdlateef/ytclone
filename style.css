@@ -1,7 +1,9 @@
 
 *{
+  
     margin: 0;
     padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 /*............ navbar...................... */
@@ -13,6 +15,8 @@ nav{
     padding: 20px;
     position: sticky;
     top:0px;
+    background: #212121;
+
 }
 
 nav>#input{
@@ -29,6 +33,9 @@ nav form{
     display: flex;
    border: 2px solid tomato;
    border-radius:10px;
+   overflow: hidden;
+   background-color: black;
+
     
     /* width:30px; */
 }
@@ -36,6 +43,29 @@ nav form input{
     padding:10px;
     padding-inline:7px;
     width: 30vw;
+    font-size: 18px;
+    background: none;
+    border:none;
+}
+nav form button{
+  background: none;
+  color:gray;
+  border:none;
+  padding-right:5px;
+}
+.mic{
+  background-color:black;
+  padding: 10px;
+  border-radius: 50%;
+  color:aliceblue;
+}
+.last_iteams{
+
+  display: flex;
+  align-items: center;
+  gap:20px;
+  color:white;
+  
 }
 
 /*.......... sidemenu.............. */
@@ -49,17 +79,22 @@ nav form input{
     flex-direction: column;
     align-items: flex-start;
     flex-shrink: 0;
-    background-color: var(--theme-color);
     position: fixed;
-    z-index: 90;
+        z-index: 90;
     /* overflow-x: hidden; */
+    left:0px;
     overflow-y: scroll;
-    top: 55px;
-    margin-top:27px;
+    /* top: 55px; */
+    padding-top:27px;
     padding-bottom: 20px;
-background-color: aqua;  
-}
+background-color: #212121;
+color:white;
+
   
+}
+  .sidebar::-webkit-scrollbar{
+    display: none;
+  }
   .sidebar-top {
     display: flex;
     padding: 12px 0px;
@@ -286,15 +321,17 @@ background-color: aqua;
   
   .search-filters {
     display: flex;
+    position: sticky;
+    top:50px;
     height: 66px;
     align-items: center;
-    background-color: var(--theme-color);
     width: 100vw;
     overflow-x: scroll;
     white-space: nowrap;
     overflow-y: hidden;
     gap: 10px;
     padding-left: 20px;
+    background-color: #202020;
   }
   
   .search-filter-items {
@@ -312,13 +349,31 @@ background-color: aqua;
     align-items: flex-start;
     gap: 10px;
     border-radius: 10px;
-    background: var(--theme-color-hover);
-    color: var(--theme-color-light);
+    background: #303030;
+
+    color:  #AAAAAA;
     font-family: Roboto;
     font-size: 14px;
     font-style: normal;
     font-weight: 400;
     line-height: normal;
-    color: var(--theme-color-text);
+    border: 1px solid #AAAAAA;
+    /* color: var(--theme-color-text); */
   }
-  
+  #first{
+    background-color: azure;
+    color:black;
+  }
+  .main{
+    
+     margin-top: 9.5vh; 
+    margin-left:  17vw;
+    width:90.2vw;
+    height: 80vh;
+    background-color: black;
+    /* overflow-x: scroll; */
+    position: fixed;
+  }
+  main{
+    display: flex;
+  }
