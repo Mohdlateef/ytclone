@@ -1,0 +1,324 @@
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+/*............ navbar...................... */
+nav{
+    display:  flex;
+    background-color: rgb(154, 83, 83);
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    position: sticky;
+    top:0px;
+}
+
+nav>#input{
+
+    display: flex;
+    align-items: center;
+    /* background-color: aqua; */
+    /* width: 600px; */
+    gap:10px;
+   
+
+}
+nav form{
+    display: flex;
+   border: 2px solid tomato;
+   border-radius:10px;
+    
+    /* width:30px; */
+}
+nav form input{
+    padding:10px;
+    padding-inline:7px;
+    width: 30vw;
+}
+
+/*.......... sidemenu.............. */
+
+
+.sidebar {
+    display: flex;
+    width: 240px;
+    height: 90vh; /* Change from 100wh to 100vh */
+    padding-right: 0px;
+    flex-direction: column;
+    align-items: flex-start;
+    flex-shrink: 0;
+    background-color: var(--theme-color);
+    position: fixed;
+    z-index: 90;
+    /* overflow-x: hidden; */
+    overflow-y: scroll;
+    top: 55px;
+    margin-top:27px;
+    padding-bottom: 20px;
+background-color: aqua;  
+}
+  
+  .sidebar-top {
+    display: flex;
+    padding: 12px 0px;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .home {
+    display: flex;
+    padding: 8px 8px 8px 24px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    /* background: var(--border-color, #303030); */
+  }
+  
+  .item {
+    display: flex;
+    width: 192px;
+    align-items: flex-start;
+    gap: 24px;
+    cursor: pointer;
+  }
+  
+  .item-logo {
+    display: flex;
+    width: 24px;
+    height: 24px;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+  }
+  
+  .item-text {
+    display: flex;
+    width: 144px;
+    padding: 4px 0px;
+    align-items: flex-start;
+    gap: 10px;
+    flex-shrink: 0;
+    color: var(--theme-color-text);
+    font-family: Roboto;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+  }
+  
+  .explore {
+    display: flex;
+    padding: 8px 8px 8px 24px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+  
+  .subscriptions {
+    display: flex;
+    padding: 8px 8px 8px 24px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+  
+  .options {
+    display: flex;
+    padding: 8px 8px 8px 24px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+  
+  .sidebar-top :hover {
+    background: var(--theme-color-hover);
+  }
+  
+  .sidebar-top2 :hover {
+    background: var(--theme-color-hover);
+  }
+  
+  .sidebar-top2 {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+  
+  .sidebar-subcriptions {
+    display: flex;
+    padding-top: 12px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+  
+  .sidebar-subscriptions :hover {
+    background: var(--theme-color-hover);
+  }
+  
+  .subscription-title {
+    display: flex;
+    width: 224px;
+    height: 32px;
+    padding-right: 0px;
+    align-items: center;
+  }
+  
+  .subscription-title h3 {
+    display: flex;
+    padding: 8px 24px;
+    align-items: flex-start;
+    gap: 10px;
+    color: var(--theme-color-text);
+    font-family: Roboto;
+    font-size: 17px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+  }
+  
+  .subscription-channel {
+    display: flex;
+    padding: 8px 8px 8px 24px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    cursor: pointer;
+  }
+  
+  .sidebar-subcriptions :hover {
+    background: var(--theme-color-hover);
+  }
+  
+  .subscription-item {
+    display: flex;
+    width: 192px;
+    align-items: flex-start;
+    gap: 24px;
+  }
+  
+  .subscription-channel-icon {
+    display: flex;
+    width: 24px;
+    height: 24px;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+  }
+  
+  .channel-icon {
+    display: flex;
+    width: 24px;
+    height: 24px;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+    border-radius: 50%;
+  }
+  
+  .subscription-channel-title {
+    display: flex;
+    width: 144px;
+    padding: 4px 0px;
+    align-items: flex-start;
+    gap: 10px;
+    flex-shrink: 0;
+    color: var(--theme-color-text);
+    font-family: Roboto;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+  }
+  
+  .sidebar-more {
+    display: flex;
+    padding-top: 12px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+  
+  .sidebar-more :hover {
+    background: var(--theme-color-hover);
+  }
+  
+  .more-title {
+    display: flex;
+    width: 224px;
+    height: 32px;
+    padding-right: 0px;
+    align-items: center;
+  }
+  
+  .more-title h3 {
+    display: flex;
+    padding: 8px 24px;
+    align-items: flex-start;
+    gap: 10px;
+    color: var(--theme-color-text);
+    font-family: Roboto;
+    font-size: 17px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+  }
+  
+
+.top-menu {
+    display: flex;
+    width: auto;
+    flex-direction: row;
+    align-items: flex-start;
+    background-color: var(--theme-color);
+    overflow-y: hidden;
+    position: fixed;
+    z-index: 90;
+    top: 80px;
+    left: 240px;
+  }
+  .search-filters::-webkit-scrollbar{
+    display: none;
+  }
+  
+  .search-filters {
+    display: flex;
+    height: 66px;
+    align-items: center;
+    background-color: var(--theme-color);
+    width: 100vw;
+    overflow-x: scroll;
+    white-space: nowrap;
+    overflow-y: hidden;
+    gap: 10px;
+    padding-left: 20px;
+  }
+  
+  .search-filter-items {
+    display: inline-flex;
+    /* padding-left: 12px; */
+    flex-direction: column;
+    align-items: flex-start;
+    cursor: pointer;
+  }
+  
+  .filter-button {
+    display: flex;
+    padding: 8px 12px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    border-radius: 10px;
+    background: var(--theme-color-hover);
+    color: var(--theme-color-light);
+    font-family: Roboto;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    color: var(--theme-color-text);
+  }
+  
