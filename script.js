@@ -1,6 +1,6 @@
-const API_KEY = "AIzaSyCuVczkQzXVaFgTfOUBKTuMvQ5sWvnB1Gg"
+const API_KEY = "AIzaSyDOd0ADUjmfRG1H7AhwDAs4cGugoW8kJk8";
 const BASE_URL = "https://www.googleapis.com/youtube/v3";
-let maxresult=10;
+let maxresult=11;
 let videoContainer=document.getElementById("video_container");
 
 const searchButton=document.getElementById("Search_input");
@@ -11,6 +11,7 @@ async function searchVideos(searchQuery) {
     console.log( "ser",searchQuery);
     if (searchQuery == "" || searchQuery == undefined) {
       document.title = "Youtube";
+      searchQuery="worldcup"
     } else {
       document.title = `${searchQuery} - Youtube`;
     }
@@ -29,20 +30,17 @@ try {
     console.log(err);
   }
 }
-let a="worldcup"
-searchVideos(a);
+
+searchVideos("");
 function displayVideo(data) {
     data.map(async (item) => {
       // console.log(item.snippet.channelId);
   
       const channedInfo = await channelDetails(item.snippet.channelId);
-  
+
       const channelThumbnail = channedInfo.items[0].snippet.thumbnails.high.url;
   
       const videoInfo = await videoDetailS(item.id.videoId);
-  
-      const publishDate = displayDate(videoInfo.items[0].snippet.publishedAt);
-  
       const viewsData = converViews(videoInfo.items[0].statistics.viewCount);
   
       const videoDiv = document.createElement("div");
@@ -76,7 +74,7 @@ function displayVideo(data) {
   
         <div class="channel-name">
           <h3>${item.snippet.channelTitle}</h3>
-          <h2>${viewsData} views · ${publishDate}</h2>
+          <h2>${viewsData} views · ${"10days ago"}</h2>
         </div>`;
   
       videoContainer.appendChild(videoDiv);
@@ -122,48 +120,21 @@ function displayVideo(data) {
       const divisor = Math.pow(10, i * 3);
       if (data >= divisor) {
         const result = (data / divisor).toFixed(1);
+      // console.log(result);
         return result + abbreviations[i];
       }
     }
   
     return data.toString();
   }
-  function displayDate(data) {
-    const millisecondsPerMinute = 60 * 1000;
-    const millisecondsPerHour = 60 * millisecondsPerMinute;
-    const millisecondsPerDay = 24 * millisecondsPerHour;
-    const millisecondsPerMonth = 30.44 * millisecondsPerDay;
-    const millisecondsPerYear = 365.25 * millisecondsPerDay;
-  
-    const start = new Date(data);
-    const end = new Date();
-    const timeDifference = Math.abs(end - start);
-  
-    const units = [
-      { label: "year", divisor: millisecondsPerYear },
-      { label: "month", divisor: millisecondsPerMonth },
-      { label: "week", divisor: 7 * millisecondsPerDay },
-      { label: "day", divisor: millisecondsPerDay },
-      { label: "hour", divisor: millisecondsPerHour },
-      { label: "minute", divisor: millisecondsPerMinute },
-    ];
-  
-    for (const unit of units) {
-      const value = Math.floor(timeDifference / unit.divisor);
-      if (value !== 0) {
-        return value + " " + (value === 1 ? unit.label : unit.label + "s") + " ago";
-      }
-    }
-  
-    return "just now";
-  }
-  
+ 
   
   searchButton.addEventListener("submit", (e) => {
     e.preventDefault();
    
-  
+   
      searchVideos(e.target.search.value);
+     e.target.search.value="";
   });
   
   
@@ -171,37 +142,3 @@ function displayVideo(data) {
 //     searchVideos(event.target.innerText);
 //   }
   
-//   function openVideo(item) {
-//     const jsonString = JSON.stringify(item);
-//     localStorage.setItem("videoToWatch", jsonString);
-//     window.location.href = "video.html";
-  
-//   }
-  
-  
-  
-  //dark-mode
-//   document.documentElement.style.setProperty("--theme-color", "#0f0f0f");
-  
-//   document.documentElement.style.setProperty("--theme-color-text", "#fff");
-  
-//   document.documentElement.style.setProperty("--theme-color-light", "#292929");
-  
-//   document.documentElement.style.setProperty("--theme-color-light-text", "#aaa");
-  
-//   document.documentElement.style.setProperty("--theme-color-hover", "#292929");
-  
-//   document.documentElement.style.setProperty("--theme-color-logo", "#fff");
-
-// //to get video statis this is like count view count video duration
-// async function fetchvideostats(videoid)
-// {
-//     const response=await fetch(url+'/videos'+`?key=${key}&part=statistics&id=${videoid}`)
-// // here go id and video id from arr and put it at video id;  
-// }
-// // to get video duration use part=contentDetails
-// async function fetchlogo(channelid)
-// {
-//     const response=await fetch(url+'/channels'+ `?key=${key}&part=snippet &id=${channelId}`)
-//     // get chaneel id that is inside the the sinppet
-// }
