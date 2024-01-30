@@ -4,18 +4,20 @@
     margin: 0;
     padding: 0;
     font-family: Arial, Helvetica, sans-serif;
+    /* background-color: black; */
 }
 
 /*............ navbar...................... */
 nav{
     display:  flex;
-    background-color: rgb(154, 83, 83);
+    /* background-color: rgb(154, 83, 83); */
     align-items: center;
     justify-content: space-between;
     padding: 20px;
     position: sticky;
     top:0px;
     background: #212121;
+    z-index: 40000;
 
 }
 
@@ -31,7 +33,7 @@ nav>#input{
 }
 nav form{
     display: flex;
-   border: 2px solid tomato;
+   border: 2px solid #303030;
    border-radius:10px;
    overflow: hidden;
    background-color: black;
@@ -47,17 +49,28 @@ nav form input{
     background: none;
     border:none;
 }
+nav form input:focus{
+  color:white;
+  outline: none;
+}
 nav form button{
-  background: none;
+  padding-inline:8px;
+  background: #303030;
   color:gray;
   border:none;
   padding-right:5px;
 }
+nav form button:hover{
+  cursor: pointer;
+}
 .mic{
-  background-color:black;
+  background-color:#303030;
   padding: 10px;
   border-radius: 50%;
   color:aliceblue;
+}
+.mic:hover{
+  cursor: pointer;;
 }
 .last_iteams{
 
@@ -69,32 +82,36 @@ nav form button{
 }
 
 /*.......... sidemenu.............. */
+main{
 
+  /* background-color: aqua; */
+  display: flex;
+  position: fixed;
+}
 
 .sidebar {
     display: flex;
     width: 240px;
-    height: 90vh; /* Change from 100wh to 100vh */
+    height: 100vh; 
     padding-right: 0px;
     flex-direction: column;
     align-items: flex-start;
-    flex-shrink: 0;
-    position: fixed;
-        z-index: 90;
-    /* overflow-x: hidden; */
+    position: sticky;   
+    z-index: 90;
     left:0px;
     overflow-y: scroll;
-    /* top: 55px; */
-    padding-top:27px;
+   
+    padding-top:10px;
     padding-bottom: 20px;
 background-color: #212121;
 color:white;
 
   
 }
-  .sidebar::-webkit-scrollbar{
+ 
+.sidebar::-webkit-scrollbar{
     display: none;
-  }
+  } 
   .sidebar-top {
     display: flex;
     padding: 12px 0px;
@@ -108,7 +125,7 @@ color:white;
     flex-direction: column;
     align-items: flex-start;
     gap: 10px;
-    /* background: var(--border-color, #303030); */
+   
   }
   
   .item {
@@ -302,46 +319,46 @@ color:white;
     line-height: normal;
   }
   
+.left{
+  display: flex;
+  flex-direction: column;
+  width:85vw;
+  background-color: rgb(0, 0, 0);
+  color: white;
+  /* overflow: hidden; */
+ 
+ 
+}
+.search-filters{
+  display: flex;
+  overflow-y:scroll ;
+  height: 66px;
+  align-items: center;
+  width: 100vw;
+  overflow-y: scroll;
+  white-space: nowrap;
+  overflow-y: hidden;
+  gap: 10px;
+  padding-left: 20px;
+  background-color: #202020;
+  /* position: sticky; */
+  top:0px;
+ 
+}
+.search-filters::-webkit-scrollbar{
+  display: none;
+ 
+}
 
-.top-menu {
-    display: flex;
-    width: auto;
-    flex-direction: row;
-    align-items: flex-start;
-    background-color: var(--theme-color);
-    overflow-y: hidden;
-    position: fixed;
-    z-index: 90;
-    top: 80px;
-    left: 240px;
-  }
-  .search-filters::-webkit-scrollbar{
-    display: none;
-  }
-  
-  .search-filters {
-    display: flex;
-    position: sticky;
-    top:50px;
-    height: 66px;
-    align-items: center;
-    width: 100vw;
-    overflow-x: scroll;
-    white-space: nowrap;
-    overflow-y: hidden;
-    gap: 10px;
-    padding-left: 20px;
-    background-color: #202020;
-  }
   
   .search-filter-items {
     display: inline-flex;
-    /* padding-left: 12px; */
-    flex-direction: column;
+     padding-left: 12px; 
+   flex-direction: column;
     align-items: flex-start;
     cursor: pointer;
   }
-  
+   
   .filter-button {
     display: flex;
     padding: 8px 12px;
@@ -358,22 +375,144 @@ color:white;
     font-weight: 400;
     line-height: normal;
     border: 1px solid #AAAAAA;
-    /* color: var(--theme-color-text); */
+   
   }
   #first{
     background-color: azure;
     color:black;
   }
-  .main{
-    
-     margin-top: 9.5vh; 
-    margin-left:  17vw;
-    width:90.2vw;
-    height: 80vh;
-    background-color: black;
-    /* overflow-x: scroll; */
-    position: fixed;
-  }
-  main{
+  
+  .video_div{
+   
     display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    padding:30px;
+  height:400px;
+    /* background: none; */
+     /* background-color: rgb(132, 92, 92); */
+     color:white;
+     overflow-y:scroll ;
   }
+  
+  .video-page{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+     padding-left:30px ;
+     width: 100%;
+     padding:25px;
+     
+     overflow: hidden;
+     
+  }
+  
+  .video {
+   
+  
+    display: flex;
+    flex-direction: column;
+    
+    width: 276px;
+    min-height: 290px;
+   
+    overflow: hidden;
+    border-radius: 10px;
+   
+    cursor: pointer;
+    transition: all 0.5s ease;
+  }
+  
+  .video:hover {
+    scale: 1.03;
+  }
+  
+  .thumbnail {
+  
+  
+    position: relative;
+    border-radius: 10px;
+    overflow: hidden;
+    background-size: cover;
+  }
+  
+  .thumbnail img {
+    
+  
+    width: 310px;
+    height: 170px;
+    border-radius: 10px;
+    object-fit: cover;
+    overflow: hidden;
+  }
+  
+  .title {
+    display: flex;
+    width: 252px;
+    height: 74px;
+    align-items: flex-start;
+    flex-shrink: 0;
+    padding-top: 10px;
+  }
+  
+  .channel-profile {
+    display: flex;
+    padding: 12px 12px 26px 0px;
+    align-items: flex-start;
+    gap: 10px;
+  }
+  
+  .channel {
+    display: flex;
+    width: 36px;
+    height: 36px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 24px; 
+   }
+  
+  .video-desc {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .video-info {
+    display: flex;
+    padding-top: 12px;
+    align-items: flex-start;
+    gap: 10px;
+    color: var(--theme-color-text);
+    font-family: Roboto;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    width: 204px;
+  }
+  
+  .channel-name {
+    display: flex;
+    width: 204px;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .channel-name h3 {
+    color: var(--theme-color-light-text);
+    font-family: Roboto;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin-bottom: 0;
+  }
+  
+  .channel-name h2 {
+    color: var(--theme-color-light-text);
+    font-family: Roboto;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+  }  
