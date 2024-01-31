@@ -4,13 +4,11 @@
     margin: 0;
     padding: 0;
     font-family: Arial, Helvetica, sans-serif;
-    /* background-color: black; */
 }
 
 /*............ navbar...................... */
 nav{
     display:  flex;
-    /* background-color: rgb(154, 83, 83); */
     align-items: center;
     justify-content: space-between;
     padding: 20px;
@@ -438,7 +436,7 @@ color:white;
   
   .thumbnail img {
     
-  
+
     width: 310px;
     height: 170px;
     border-radius: 10px;

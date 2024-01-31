@@ -1,4 +1,4 @@
-const API_KEY = "AIzaSyDOd0ADUjmfRG1H7AhwDAs4cGugoW8kJk8";
+const API_KEY ="AIzaSyCuVczkQzXVaFgTfOUBKTuMvQ5sWvnB1Gg";
 const BASE_URL = "https://www.googleapis.com/youtube/v3";
 let maxresult=11;
 let videoContainer=document.getElementById("video_container");
@@ -142,3 +142,10 @@ function displayVideo(data) {
 //     searchVideos(event.target.innerText);
 //   }
   
+
+function openVideo(item) {
+  const jsonString = JSON.stringify(item);
+  localStorage.setItem("videoToWatch", jsonString);
+  window.location.href = "video.html";
+
+}
