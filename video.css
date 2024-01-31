@@ -13,7 +13,8 @@
   overflow: hidden;
   height: 100vh;
   padding-top:20px;
-  background-color: rgb(110, 104, 104);
+  background-color:#181818;
+
 
 }
 
@@ -245,13 +246,12 @@ iframe {
   overflow-y: hidden;
   width: 24vw;
   height: 40px;
+  color:white;
 }
 
 .search-filter {
   display: flex;
   align-items: center;
-  border: 0.3px solid var(--theme-color-light-text);
-  background-color: var(--theme-color-hover);
   padding-top: 10px;
   padding-left: 20px;
   padding-right: 20px;
@@ -274,6 +274,7 @@ iframe {
   display: flex;
   flex-direction: column;
   gap: 10px;
+  color: white;
   /* overflow-y: hidden; */
   /* margin-left: 7vw; */
 }

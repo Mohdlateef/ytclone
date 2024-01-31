@@ -10,11 +10,13 @@ const videoDescText = document.querySelector(".video-desc-text");
 
 const suggetions = document.querySelector(".suggetions");
 
+
 let showMoreBefore;
 let showMoreAfter;
 
 function getDataFromStorage() {
   dataToGet = JSON.parse(localStorage.getItem("videoToWatch"));
+  console.log(dataToGet);
 
   displayVideo(dataToGet);
 }
