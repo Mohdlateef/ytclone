@@ -176,7 +176,7 @@ async function setSecondaryVideos(data) {
 
   getSuggetions.items.map(async (item) => {
     const videosDetails = await videoDetailS(item.id.videoId);
-    console.log(videosDetails.items[0]);
+    // console.log(videosDetails.items[0]);
 
     const videoDuration = convertVideoDuration(
       videosDetails.items[0].contentDetails.duration

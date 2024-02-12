@@ -6,6 +6,7 @@
     font-family: Arial, Helvetica, sans-serif;
 }
 
+
 /*............ navbar...................... */
 nav{
     display:  flex;
@@ -514,3 +515,4 @@ color:white;
     font-weight: 400;
     line-height: normal;
   }  
+  

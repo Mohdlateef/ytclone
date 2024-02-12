@@ -1,9 +1,9 @@
 const API_KEY = "AIzaSyCuVczkQzXVaFgTfOUBKTuMvQ5sWvnB1Gg";
 const BASE_URL = "https://www.googleapis.com/youtube/v3";
-let maxresult = 11;
-let videoContainer = document.getElementById("video_container");
-
+const maxresult = 11;
+const videoContainer = document.getElementById("video_container");
 const searchButton = document.getElementById("Search_input");
+let main=document.getElementById("main");
 
 async function searchVideos(searchQuery) {
   console.log("ser", searchQuery);
