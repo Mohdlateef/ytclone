@@ -5,7 +5,10 @@
     padding: 0;
     font-family: Arial, Helvetica, sans-serif;
 }
-
+body{
+  background-color:#0b0b0b;
+  color:white;
+}
 
 /*............ navbar...................... */
 nav{
@@ -15,7 +18,7 @@ nav{
     padding: 20px;
     position: sticky;
     top:0px;
-    background: #212121;
+    /* background: #212121; */
     z-index: 40000;
 
 }
@@ -55,7 +58,7 @@ nav form input:focus{
 nav form button{
   padding-inline:8px;
   background: #303030;
-  color:gray;
+  /* color:gray; */
   border:none;
   padding-right:5px;
 }
@@ -76,7 +79,7 @@ nav form button:hover{
   display: flex;
   align-items: center;
   gap:20px;
-  color:white;
+  /* color:white; */
   
 }
 
@@ -102,8 +105,8 @@ main{
    
     padding-top:10px;
     padding-bottom: 20px;
-background-color: #212121;
-color:white;
+/* background-color: #212121; */
+/* color:white; */
 
   
 }
@@ -322,8 +325,8 @@ color:white;
   display: flex;
   flex-direction: column;
   width:85vw;
-  background-color: rgb(0, 0, 0);
-  color: white;
+  /* background-color: rgb(0, 0, 0); */
+  /* color: white; */
   /* overflow: hidden; */
  
  
@@ -339,7 +342,9 @@ color:white;
   overflow-y: hidden;
   gap: 10px;
   padding-left: 20px;
-  background-color: #202020;
+  /* background-color: #202020; */
+
+
   /* position: sticky; */
   top:0px;
  
@@ -390,7 +395,7 @@ color:white;
   height:400px;
     /* background: none; */
      /* background-color: rgb(132, 92, 92); */
-     color:white;
+     /* color:white; */
      overflow-y:scroll ;
   }
   
@@ -515,4 +520,7 @@ color:white;
     font-weight: 400;
     line-height: normal;
   }  
-  
+  /* .changecolor{
+    background-color:white;
+    color: black;
+  } */
