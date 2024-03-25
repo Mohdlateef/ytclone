@@ -4,15 +4,17 @@ const maxresult = 11;
 const videoContainer = document.getElementById("video_container");
 const searchButton = document.getElementById("Search_input");
 let main=document.getElementById("main");
-
 async function searchVideos(searchQuery) {
   console.log("ser", searchQuery);
+
   if (searchQuery == "" || searchQuery == undefined) {
     document.title = "Youtube";
     searchQuery = "worldcup";
   } else {
     document.title = `${searchQuery} - Youtube`;
   }
+ 
+
 
   try {
     let url = `${BASE_URL}/search?key=${API_KEY}&q=${searchQuery}&part=snippet&maxResults=10`;
@@ -24,12 +26,13 @@ async function searchVideos(searchQuery) {
     videoContainer.innerHTML = "";
     displayVideo(data.items);
   } catch (err) {
-    console.log(err);
+    alert(err.message)
   }
 }
 
 searchVideos("");
 function displayVideo(data) {
+ 
   data.map(async (item) => {
     const channedInfo = await channelDetails(item.snippet.channelId);
 
@@ -125,6 +128,7 @@ function converViews(data) {
 
 searchButton.addEventListener("submit", (e) => {
   e.preventDefault();
+  
 
   searchVideos(e.target.search.value);
   e.target.search.value = "";

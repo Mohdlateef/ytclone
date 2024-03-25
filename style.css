@@ -38,7 +38,7 @@ nav form{
    border: 2px solid #303030;
    border-radius:10px;
    overflow: hidden;
-   background-color: black;
+   /* background-color: black; */
 
     
     /* width:30px; */
@@ -48,28 +48,30 @@ nav form input{
     padding-inline:7px;
     width: 30vw;
     font-size: 18px;
-    background: none;
+    /* background: none; */
     border:none;
 }
 nav form input:focus{
-  color:white;
+  /* color:white; */
   outline: none;
 }
 nav form button{
   padding-inline:8px;
-  background: #303030;
+  /* background: #303030; */
   /* color:gray; */
+  /* color:white; */
   border:none;
   padding-right:5px;
+  /* background:transparent; */
 }
 nav form button:hover{
   cursor: pointer;
 }
 .mic{
-  background-color:#303030;
+  /* background-color:#303030; */
   padding: 10px;
   border-radius: 50%;
-  color:aliceblue;
+  /* color:aliceblue; */
 }
 .mic:hover{
   cursor: pointer;;
@@ -370,9 +372,9 @@ main{
     align-items: flex-start;
     gap: 10px;
     border-radius: 10px;
-    background: #303030;
+    /* background: #303030; */
 
-    color:  #AAAAAA;
+    /* color:  #AAAAAA; */
     font-family: Roboto;
     font-size: 14px;
     font-style: normal;
@@ -520,7 +522,3 @@ main{
     font-weight: 400;
     line-height: normal;
   }  
-  /* .changecolor{
-    background-color:white;
-    color: black;
-  } */
