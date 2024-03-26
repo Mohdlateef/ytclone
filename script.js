@@ -1,4 +1,5 @@
-const API_KEY = "AIzaSyCuVczkQzXVaFgTfOUBKTuMvQ5sWvnB1Gg";
+const API_KEY = "AIzaSyBbpm4BlZV4rQFZiIqAaYiVzaH5xyaiKk4";
+// "AIzaSyCuVczkQzXVaFgTfOUBKTuMvQ5sWvnB1Gg";
 const BASE_URL = "https://www.googleapis.com/youtube/v3";
 const maxresult = 11;
 const videoContainer = document.getElementById("video_container");
@@ -6,7 +7,7 @@ const searchButton = document.getElementById("Search_input");
 let main=document.getElementById("main");
 async function searchVideos(searchQuery) {
   console.log("ser", searchQuery);
-
+  videoContainer.innerHTML=""
   if (searchQuery == "" || searchQuery == undefined) {
     document.title = "Youtube";
     searchQuery = "worldcup";
@@ -26,7 +27,8 @@ async function searchVideos(searchQuery) {
     videoContainer.innerHTML = "";
     displayVideo(data.items);
   } catch (err) {
-    alert(err.message)
+    // alert(err.message)
+console.log(err)
   }
 }
 
